@@ -10,7 +10,7 @@ public class HotelBookingTest {
 
     WebDriver driver = new ChromeDriver();
 
-    @FindBy(linkText = "Hotels")
+    @FindBy(xpath = "//a[contains(text(),'Hotels')]")
     private WebElement hotelLink;
 
     @FindBy(id = "Tags")
