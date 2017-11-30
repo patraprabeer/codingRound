@@ -21,7 +21,7 @@ public class SignInTest {
         driver.findElement(By.id("SignIn")).click();
 
         driver.findElement(By.id("signInButton")).click();
-
+        driver.switchTo().frame("_hjRemoteVarsFrame");
         String errors1 = driver.findElement(By.id("errors1")).getText();
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
         driver.quit();
